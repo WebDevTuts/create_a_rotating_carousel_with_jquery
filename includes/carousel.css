@@ -10,7 +10,7 @@
 .carousel_container {
   height: 340px;
   margin: 0;
-  background: url(../images/background.jpg) no-repeat 0px 0px;
+  background: #a00 url(../images/background.jpg) no-repeat 0px 0px;
 }
 
 .caption_container {
@@ -56,5 +56,20 @@
   position: absolute;
   top: 270px;
   left: 102px;
-  z-index: 1003;
+  z-index: 1000;
+}
+
+#captions h2 {
+  font-family: Georgia;
+  font-size: 32px;
+  font-weight: normal;
+  margin: 0 0 5px 0;
+  color: #6d8824;
+}
+
+#captions p {
+  font-family: Arial;
+  font-size: 14px;
+  color: #444;
+  margin: 0 0 0 3px;
 }
