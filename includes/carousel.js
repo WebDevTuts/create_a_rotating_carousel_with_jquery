@@ -22,4 +22,17 @@ function createCarousel() {
     duration: 1200
   });
 
+  createCustomButtons();
+
+}
+
+function createCustomButtons() {
+
+  $('.nextItem').click(function() {
+    $('div#carousel').roundabout('animateToNextChild');
+  });
+  $('.prevItem').click(function() {
+    $('div#carousel').roundabout('animateToPreviousChild');
+  });
+
 }
