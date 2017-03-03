@@ -1,5 +1,7 @@
 // JavaScript Document
 
+var startingItem = 3;
+
 $(document).ready(function() {
 
   $('.carousel_data .carousel_item').each(function() {
@@ -9,13 +11,14 @@ $(document).ready(function() {
   });
 
   createCarousel();
-  // showCaption();
+  showCaption();
 });
 
 function createCarousel() {
 
   $('div#carousel').roundabout({
     childSelector: 'img',
+    startingChild: window.startingChild,
     tilt: -4.5,
     minOpacity: 1,
     minScale: .45,
