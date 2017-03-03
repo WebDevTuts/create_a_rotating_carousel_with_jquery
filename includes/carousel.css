@@ -1,1 +1,21 @@
 /* CSS Document                             */
+
+.my_carousel {
+  position: relative;
+  width: 760px;
+  background-color: #fff;
+  margin: 30px auto 20px auto;
+}
+
+.carousel_container {
+  height: 340px;
+  margin: 0;
+  background: url(../images/background.jpg) no-repeat 0px 0px;
+}
+
+.caption_container {
+  width: 435px;
+  margin: 0 0 0 165px;
+  padding: 0 0 0 20px;
+  border-left: 3px solid #713e1b;
+}
