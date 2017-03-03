@@ -19,7 +19,9 @@ function createCarousel() {
     tilt: -4.5,
     minOpacity: 1,
     minScale: .45,
-    duration: 1200
+    duration: 1200,
+    clickToFocus: true,
+    clickToFocusCallback: showCaption
   });
 
   createCustomButtons();
@@ -35,4 +37,12 @@ function createCustomButtons() {
     $('div#carousel').roundabout('animateToPreviousChild');
   });
 
+}
+
+function showCaption() {
+
+  var childInFocus = $('div#carousel').data('roundabout').childInFocus;
+  var setCaption = $('.carousel_data .carousel_item .caption:eq('+childInFocus+')').html();
+
+  $('#captions').html(setCaption);
 }
