@@ -9,7 +9,7 @@ $(document).ready(function() {
   });
 
   createCarousel();
-
+  // showCaption();
 });
 
 function createCarousel() {
@@ -31,10 +31,15 @@ function createCarousel() {
 function createCustomButtons() {
 
   $('.nextItem').click(function() {
-    $('div#carousel').roundabout('animateToNextChild');
+    hideCaption();
+    $('div#carousel').roundabout('animateToNextChild', showCaption);
   });
   $('.prevItem').click(function() {
-    $('div#carousel').roundabout('animateToPreviousChild');
+    hideCaption();
+    $('div#carousel').roundabout('animateToPreviousChild', showCaption);
+  });
+  $('div#carousel img').click(function() {
+    hideCaption();
   });
 
 }
@@ -45,4 +50,13 @@ function showCaption() {
   var setCaption = $('.carousel_data .carousel_item .caption:eq('+childInFocus+')').html();
 
   $('#captions').html(setCaption);
+
+  var newHeight = $('#captions').height()+'px';
+  $('.caption_container').animate({'height':newHeight},500,function(){
+    $('#captions').animate({'opacity':1},250);
+  });
+}
+
+function hideCaption() {
+  $('#captions').animate({'opacity':0},250);
 }
